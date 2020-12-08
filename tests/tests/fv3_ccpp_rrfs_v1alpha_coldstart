@@ -1,12 +1,12 @@
 ###############################################################################
 #
-#  FV3 CCPP RRFS (Thompson MP + MYNN PBL + NOAHMP LSM + MYNN SFC) test
+#  FV3 CCPP RRFS (Thompson MP + MYNN PBL + NOAHMP LSM + GFS SFC) test
 #
 ###############################################################################
 
-export TEST_DESCR="Compare FV3 CCPP RRFS_v1beta results with previous trunk version"
+export TEST_DESCR="Compare FV3 CCPP RRFS_v1alpha results with previous trunk version"
 
-export CNTL_DIR=fv3_rrfs_v1beta
+export CNTL_DIR=fv3_rrfs_v1alpha
 
 export LIST_FILES="phyf000.tile1.nc \
                    phyf000.tile2.nc \
@@ -41,7 +41,7 @@ export FDIAG=3
 export DT_ATMOS="600"
 
 export FV3_RUN=ccpp_gsd_run.IN
-export CCPP_SUITE=FV3_RRFS_v1beta
+export CCPP_SUITE=FV3_RRFS_v1alpha
 export CCPP_LIB_DIR=ccpp/lib
 export INPUT_NML=ccpp_global.nml.IN
 
@@ -68,7 +68,7 @@ export FHCYC=0
 export LSM=2
 export LSOIL_LSM=4
 #export GWD_OPT=3
-export DO_MYNNSFCLAY=.T.
+#export DO_MYNNSFCLAY=.T.
 
 RUN_SCRIPT=rt_fv3.sh
 
