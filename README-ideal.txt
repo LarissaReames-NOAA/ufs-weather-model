@@ -2,13 +2,19 @@ This branch of ufs_weather_model contains bug fixes and modifications to run the
 
 The model is run in the same manner as when it's run on a cubed-sphere grid (i.e., global, regional), except no boundary conditions are required. 
 
+The provided sample namelist and data described here are designed to run within the directory created by the SRW release branch workflow (minus the copied input data and grid files), but a sample run directory run directory is provided at 
+
+/scratch1/BMC/gsd-fv3/Larissa.Reames/ideal_periodic/sample_run
+
+You should modify run_fv3sar_20190520.slurm to use your allocation account and to point to your install of the ufs-srweather-app and the README file containing the correct Hera modules to load. 
+
 Initial conditions are provided as output from chgres_cube. All provided sample data are on a 98x98 3-km grid with 48 vertical levels and Thompson tracers. Each environment has a 10-km horizontal radius, 2-km vertical radius, 3-K bubble placed nearthe center of the domain over a background Weisman-Klemp 1984 thermodynamic sounding. 
 
 This data and a sample input.nml file can be accessed on Hera at
 
-/scratch1/BMC/gsd-fv3/Larissa.Reames/ideal_input
+/scratch1/BMC/gsd-fv3/Larissa.Reames/ideal_periodic/input
 
-Data should be copied or linked directly from this location. No need to change the file names, they are as they should be.
+Input data should be copied or linked directly from this location in to the INPUT subdirectory of your run directory. No need to change the file names, they are as they should be.
 
 Two variations on the wind shear environment are provided. Subdirectories are as follows:
 
@@ -16,7 +22,7 @@ Two variations on the wind shear environment are provided. Subdirectories are as
 
     quarter_circle_supercell : Standard quarter-circle hodograph with a final wind vector aloft of (27.15, 3.5). This is the hodograph provided in WRF's quarter-circled supercell idealized sounding.
 
-Important changes to input.nml that should be noted:
+The sample input.nml should be copied in to your run directory. Important changes to input.nml that should be noted:
 
     - A new section, &test_case_nml : This includes the "test_case" option. Do not change from 999. You will have a bad time if you do.
 
