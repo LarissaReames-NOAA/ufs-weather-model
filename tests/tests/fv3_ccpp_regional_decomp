@@ -10,12 +10,13 @@ export CNTL_DIR=fv3_regional_control
 
 export LIST_FILES="atmos_4xdaily.nc \
                    phyf000.nc \
+                   phyf006.nc \
                    phyf012.nc \
                    dynf000.nc \
+                   dynf006.nc \
                    dynf012.nc \
                    RESTART/coupler.res \
                    RESTART/fv_core.res.nc \
-                   RESTART/fv_core.res.tile1.nc \
                    RESTART/fv_srf_wnd.res.tile1.nc \
                    RESTART/fv_tracer.res.tile1.nc \
                    RESTART/sfc_data.nc \
@@ -68,3 +69,7 @@ RUN_SCRIPT=rt_fv3.sh
 
 # Regional option
 export WRITE_RESTART_WITH_BCS=.true.
+
+if [[ $MACHINE_ID = *.gnu ]]; then
+  export WLCLK=60
+fi
