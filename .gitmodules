@@ -1,7 +1,7 @@
 [submodule "FV3"]
 	path = FV3
 	url = https://github.com/LarissaReames-NOAA/fv3atm
-	branch = feature/idealized_periodic
+	branch = feature/idealized_periodic_mp_nssl
 [submodule "NEMS"]
 	path = NEMS
 	url = https://github.com/LarissaReames-NOAA/NEMS
