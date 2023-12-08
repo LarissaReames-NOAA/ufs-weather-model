@@ -1,0 +1,1 @@
+Compile ideal_doubly_periodic_intel elapsed time 521 seconds. -DAPP=ATM -D32BIT=ON -DCCPP_SUITES=FV3_ideal_mp_nssl -DCCPP_32BIT=ON -DMPI=ON -DCMAKE_BUILD_TYPE=Release

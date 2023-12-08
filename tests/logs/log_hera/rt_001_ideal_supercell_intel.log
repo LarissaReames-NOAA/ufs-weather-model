@@ -1,0 +1,11 @@
+
+baseline dir = /scratch1/BMC/gsd-fv3//Larissa.Reames/FV3_RT/REGRESSION_TEST/fv3_ideal_supercell_intel
+working dir  = /scratch1/BMC/gsd-fv3/Larissa.Reames/FV3_RT/rt_ideal/rt_46736/ideal_supercell_intel
+Checking test 001 ideal_supercell_intel results ....
+ Comparing fv3_history.nc .........OK
+
+  0: The total amount of wall time                        = 90.824400
+  0: The maximum resident set size (KB)                   = 995136
+
+Test 001 ideal_supercell_intel PASS
+
